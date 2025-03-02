@@ -1,0 +1,9 @@
+.gameImage {
+  text-align: center; /* centers inline elements like <img> */
+  width: fit-content;
+}
+.gameImage img {
+  width: 50%;
+  max-width: 100%; /* ensures it doesn't exceed the container's width */
+  display: inline-block; /* works with text-align: center in the parent */
+}
