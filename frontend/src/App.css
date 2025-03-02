@@ -1,9 +1,43 @@
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dropdown-container{
+  z-index: 2000;
+}
 .gameImage {
-  text-align: center; /* centers inline elements like <img> */
   width: fit-content;
+  padding-left: clamp(0rem, 10vw, 10rem);
+  overflow: auto;
 }
 .gameImage img {
-  width: 50%;
-  max-width: 100%; /* ensures it doesn't exceed the container's width */
+  width: 80vw;
+  min-width: 80vw;
+  height: auto;
+  border-radius: 16px;
   display: inline-block; /* works with text-align: center in the parent */
+}
+.header{
+  width: fit-content;
+  padding-left: clamp(0rem, 10vw, 10rem);
+}
+.header img {
+  width: 40vw;
+  min-width: 40vw;
+  border-radius: 16px;
+  display: inline-block; /* works with text-align: center in the parent */
+}
+.timer{
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: large;
+  z-index: 1000;
+}
+.timer button{
+  background-color: white;
+  color: black;
 }

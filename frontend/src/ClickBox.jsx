@@ -1,7 +1,7 @@
 // ClickBox.jsx
 import React from "react";
 
-export const ClickBox = ({
+export const ClickBox = React.memo(({
   x,
   y,
   width = 50,
@@ -23,5 +23,5 @@ export const ClickBox = ({
       {/* You can add content inside the box if needed */}
     </div>
   );
-};
+});
 

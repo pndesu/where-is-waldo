@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles/Dropdown.css";
 
-export const Dropdown = React.memo(({ x, y, boxWidth = 50, boxHeight = 50, gap = 8, isOpen, handleToggleDropdown }) => {
+export const Dropdown = React.memo(({ x, y, boxWidth = 50, boxHeight = 50, gap = 8, isOpen, handleToggleDropdown, handleTagClick, characterList }) => {
 
-  const dropdownOptions = ["Da Vinci", "Kahlo", "Van Gogh", "Warhol", "Picasso"];
+  const dropdownOptions = characterList;
   // Calculate the dropdown container position:
   // - The ClickBox is centered at (x, y) with width and height.
   // - Its right edge is at x + boxWidth/2.
@@ -25,9 +25,7 @@ export const Dropdown = React.memo(({ x, y, boxWidth = 50, boxHeight = 50, gap =
             <li
               key={idx}
               className="dropdown-item"
-              onClick={() => {
-                console.log(`Clicked: ${option}`);
-              }}
+              onClick={() => handleTagClick(option)}
             >
               {option}
             </li>
