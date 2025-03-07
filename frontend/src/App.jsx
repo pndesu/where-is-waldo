@@ -7,7 +7,7 @@ import axios from 'axios';
 import { Timer } from './Timer';
 import { Header } from './Header';
 function App() {
-  console.log("API_URL:", process.env.REACT_APP_API_URL);
+  const API_URL = "https://where-is-waldo-da2t.onrender.com";
   const [clickedCoord, setClickedCoord] = useState(null);
   const [nativeCoord, setNativeCoord] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ function App() {
   });
   const handleTagClick = (option) => {
     axios
-      .post(`${process.env.REACT_APP_API_URL}/api/validate_click`, {
+      .post(`${API_URL}/api/validate_click`, {
         x: nativeCoord.x,
         y: nativeCoord.y,
       })
