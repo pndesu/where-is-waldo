@@ -34,14 +34,14 @@ function App() {
   });
   const handleTagClick = (option) => {
     axios
-      .post("http://localhost:3001/api/validate_click", {
+      .post(`${process.env.REACT_APP_API_URL}/api/validate_click`, {
         x: nativeCoord.x,
         y: nativeCoord.y,
       })
       .then((response) => {
         if (response.data.result) {
           if (option === response.data.name) {
-            console.log("You found: " + response.data.name)
+            console.log("You found: " + response.data.name);
             setCharacterList((prevList) =>
               prevList.filter((name) => name !== option)
             );
