@@ -7,6 +7,7 @@ import axios from 'axios';
 import { Timer } from './Timer';
 import { Header } from './Header';
 function App() {
+  console.log("API_URL:", process.env.REACT_APP_API_URL);
   const [clickedCoord, setClickedCoord] = useState(null);
   const [nativeCoord, setNativeCoord] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
