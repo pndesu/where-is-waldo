@@ -41,3 +41,13 @@
   background-color: white;
   color: black;
 }
+
+.characterToFind{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.characterToFind h3{
+  text-align: center;
+}

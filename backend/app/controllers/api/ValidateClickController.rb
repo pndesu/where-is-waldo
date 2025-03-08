@@ -1,13 +1,13 @@
 # app/controllers/api/validate_click_controller.rb
 module Api
   class ValidateClickController < ApplicationController
-    before_action :set_cors_headers
+    # before_action :set_cors_headers
 
-    def set_cors_headers
-      response.set_header("Access-Control-Allow-Origin", "https://where-is-waldo-phi.vercel.app")
-      response.set_header("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD")
-      response.set_header("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization")
-    end
+    # def set_cors_headers
+    #   response.set_header("Access-Control-Allow-Origin", "https://where-is-waldo-phi.vercel.app")
+    #   response.set_header("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD")
+    #   response.set_header("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization")
+    # end
     
     def create
       x = params[:x].to_f

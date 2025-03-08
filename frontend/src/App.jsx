@@ -6,6 +6,7 @@ import { Dropdown } from './Dropdown';
 import axios from 'axios';
 import { Timer } from './Timer';
 import { Header } from './Header';
+import { CharacterToFindTab } from './CharacterToFindTab';
 function App() {
   const API_URL = "https://where-is-waldo-da2t.onrender.com";
   const [clickedCoord, setClickedCoord] = useState(null);
@@ -64,6 +65,7 @@ function App() {
       {clickedCoord && <ClickBox x={clickedCoord.x} y={clickedCoord.y} />}
       {clickedCoord && <Dropdown x={clickedCoord.x} y={clickedCoord.y} isOpen={isOpen} handleToggleDropdown={handleToggleDropdown} handleTagClick={handleTagClick} characterList={ characterList} />}
       <Timer characterList={characterList} />
+      <CharacterToFindTab characterList={ characterList} />
     </div>
   );
 }
